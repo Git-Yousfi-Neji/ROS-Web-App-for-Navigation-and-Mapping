@@ -1,5 +1,6 @@
 ## A web application for Navigation and Mapping ROS
-####This is a modified version of rizwin work
+##This is a modified version of rizwin work
+
 This is a web application that is build on Flask,serves the purpose of Mapping and Navigation of a robot that is build on ROS from a web browser.
 
 
@@ -65,7 +66,7 @@ in **app.py** with the corresponding package and launch file name.Replace your m
 
 -          `subprocess.Popen(["roslaunch", "--wait", "turtlebot3_slam", "turtlebot3_slam.launch"])`
 
-`For any help contact me on **yousfineji1@gmail.com**`
+`For any help contact me on yousfineji1@gmail.com`
 
 
 
