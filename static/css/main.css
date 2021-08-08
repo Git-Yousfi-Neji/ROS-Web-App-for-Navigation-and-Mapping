@@ -1,0 +1,489 @@
+* {
+  box-sizing: border-box;
+}
+
+
+.navigation-button{
+  width: 90px !important;
+  font-size: 12px;
+}
+.mapping-button{
+  width:120px !important;
+  font-size: 12px;
+}
+
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 20px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 12px;
+    width: 12px;
+    left: 5px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background-color: #2196F3;
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 20px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+
+
+/*  dropdown */
+
+/* Style The Dropdown Button */
+.dropbtn {
+    background-color: #f8f9fa;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    color:#6f7477  ;
+    border: none;
+    cursor: pointer;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    cursor: pointer;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+    background-color: #f1f1f1
+}
+.dropbtn:hover{
+  /*text-shadow: 1px 1px 0px #000000;*/
+  opacity: 1;
+}
+ .droptext 
+ {overflow:hidden;
+  display:inline-block;
+  text-overflow: ellipsis;
+}
+
+
+.show {
+  display: block;
+}
+
+/* drop down ends*/
+
+
+
+
+
+/* Start by setting display:none to make this hidden.
+   Then we position it in relation to the viewport window
+   with position:fixed. Width, height, top and left speak
+   for themselves. Background we set to 80% white with
+   our animation centered, and no-repeating */
+.modal-load {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(255, 255, 255, .8) url('loading0.gif') 50% 50% no-repeat;
+}
+
+
+/* When the body has the loading class, we turn
+   the scrollbar off with overflow:hidden */
+body.loading .modal-load {
+    overflow: hidden;
+}
+
+/* Anytime the body has the loading class, our
+   modal element will be visible */
+body.loading .modal-load {
+    display: block;
+}
+
+
+.nav-item {
+
+  margin-top: 10px;
+}
+
+
+
+.controls {
+    position: absolute;
+    right: 20px;
+    bottom: 10px;
+    margin: 0 auto;
+    text-align: center;
+    z-index: 10;
+    /*height: auto;*/
+}
+
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.controls li {
+    margin: 50px 0;
+}
+
+.caption {
+    /* Make the caption a block so it occupies its own line. */
+    display: block;
+}
+
+
+.navbar-nav ul {
+    display: block;
+}
+
+.navbar-nav li {
+    display: inline;
+    margin-left: 25px;
+    height: auto;
+}
+
+.center {
+    text-align: center;
+    width: 100%;
+    font-size: 1.5em;
+}
+
+
+
+
+a {
+  text-decoration: none !important;
+}
+
+
+.controls ul li a:hover {
+
+  text-shadow: 0 0 5px #0003b3; 
+}
+
+
+
+.fa-power-off:hover{
+  text-shadow: 0 0 5px #f10000 ;
+}
+
+.fa-repeat:hover{
+  text-shadow: 0 0 5px #f10000 ;
+}
+
+
+
+
+
+.fa-battery-full {
+    color: #00d113;
+    text-shadow: 1px 1px 1px #ccc;
+    font-size: 1.5em;
+
+}
+.navbar {
+  padding: 0 !important;
+}
+
+/*  Side bar */
+.side-pane ul {
+  margin-top: 80px;
+}
+
+.side-pane li {
+  list-style: none;
+  padding: 8px;
+}
+
+.box-out {
+  background: #d2f7fc;
+  height: 100%;
+  width: 230px;
+  position: fixed;
+  top: 60px;
+  left: 0px;
+  margin: 0;
+  -webkit-transition: .5s ease-out;
+  -moz-transition: .5s ease-out;
+  -o-transition: .5s ease-out;
+  -ms-transition: .5s ease-out;
+  transition: .5s ease-out;
+}
+
+.box-in {
+  margin: 0 0 0 -204px;
+}
+
+.menu-btn {
+    background: #fff;
+  background-clip: padding-box;
+  position: relative;
+  top: 45%;
+  left: 214px;
+  width: 30px;
+  height: 48px;
+  cursor: pointer;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, .175);
+  
+}
+
+.menu-btn:hover {
+  -moz-opacity: 0.8;
+  opacity: 0.8;
+
+
+}
+
+.menu-btn-left {
+ 
+  transform: rotate(-180deg);
+
+}
+.icon {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.settings-wrap{
+  
+  text-align: center; 
+  font-weight: bold;
+}
+
+.settings-wrap a{
+  font-weight: normal;
+
+}
+
+.switch-ctrl {
+    color: #a1abc3;
+    font-size: 10px;
+    align-content: right;
+}
+
+
+.canvasScreen{
+  position: absolute;
+left: 25%;
+}
+
+.controls-mapping{
+
+    position: absolute;
+    right: 4.68%;/* 75/1600    */
+    bottom: 33.46%;/* 250/747*/
+    margin: 0 auto;
+    text-align: center;
+    z-index: 10;
+}
+
+
+
+.controls-mapping li {
+    margin: 50px 0;
+}
+
+.close-navigation {
+  position: absolute;
+  right: 0;
+  padding: 0px 6px 0px 6px;
+  cursor: pointer;
+  
+}
+
+.close-navigation:hover {
+  background-color: #f44336;
+  color: white;
+
+}
+
+.index-con {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+} 
+
+.bg-image {
+  /* The image used */
+  background-image: url("robot.jpg");
+  
+  /* Add the blur effect */
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+  
+  /* Full height */
+  height: 100%; 
+  
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+.bg-text {
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+  color: white;
+  font-weight: bold;
+  border: 3px solid #f1f1f1;
+  position: absolute;
+  top: 100%;
+  left: 100%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 70%;
+  height: 100%;
+  padding: 20px;
+  text-align: center;
+}
+h2{
+  margin-bottom: 40%;
+}
+
+.button-index {
+  text-decoration: none;
+  color: black;
+  background: #73c1f3;
+  padding: 15px 40px;
+  border-radius: 4px;
+  font-weight: normal;
+  text-transform: uppercase;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.glow-button:hover {
+  color: rgba(255, 255, 255, 1);
+  box-shadow: 0 5px 15px #73c1f3;
+}
+
+
+
+.btn {
+  box-sizing: border-box;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: transparent;
+  border: 2px solid #e74c3c;
+  border-radius: 0.6em;
+  color: #e74c3c;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-self: center;
+      -ms-flex-item-align: center;
+          align-self: center;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1;
+  margin: 20px;
+  padding: 1.2em 2.8em;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+}
+.btn:hover, .btn:focus {
+  color: #fff;
+  outline: 0;
+}
+
+.first {
+  -webkit-transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+  transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+}
+.first:hover {
+  box-shadow: 0 0 40px 40px #e74c3c inset;
+}
+
+.third {
+  border-color: #3498db;
+  color: #fff;
+  box-shadow: 0 0 40px 40px #3498db inset, 0 0 0 0 #3498db;
+  -webkit-transition: all 150ms ease-in-out;
+  transition: all 150ms ease-in-out;
+}
+.third:hover {
+  box-shadow: 0 0 10px 0 #3498db inset, 0 0 10px 4px #3498db;
+}

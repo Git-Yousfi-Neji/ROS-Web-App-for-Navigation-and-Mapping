@@ -1,0 +1,8 @@
+image: psu.pgm
+resolution: 0.04600000
+origin: [-0.1 ,-0.1, 0.000000] #this origin was set carefully such that positions of landmarks are the same as in the full map
+negate: 0
+occupied_thresh: 0.9
+free_thresh: 0.6
+
+

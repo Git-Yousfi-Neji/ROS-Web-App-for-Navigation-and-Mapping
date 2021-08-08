@@ -1,0 +1,114 @@
+{% extends "layout.html" %}
+{% block content %}
+<script type="text/javascript" src="{{ url_for('static', filename='js/navigation.js')}}"></script>
+
+<nav class="navbar navbar-expand-lg bg-light navbar-light static-top">
+    <div class="container-fluid">
+        <!-- Brand -->
+        <a class="navbar-brand " href="#"><img src="{{url_for('static', filename='img/mainLogo.svg')}}" width="60" height="50" alt=""></a>
+        <!-- Links -->
+        <ul class="navbar-nav ml-auto">
+            <!-- Dropdown -->
+            <li class="dropdown">
+                <button class="dropbtn" onclick="myFunction()">Load map <i class="fa fa-caret-down"></i></button>
+                <div id="drop-text" class="dropdown-content">
+                    {% for maps in map %}
+                    <a class="droptext" >{{maps[1]}}<span class="close-navigation">&times</span></a>
+                    {% endfor %}
+                </div>
+            </li>
+            <li class="nav-item" id="restart">
+                <a class="nav-link" href="#">
+                    <i class="fa fa-repeat center"></i>
+                </a>
+            </li>
+            <li class="nav-item" id="shutdown">
+                <a class="nav-link" href="#">
+                    <i class="fa fa-power-off center"></i>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    <i class="fa fa-battery-full center"></i>
+                </a>
+   
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="robo-map-controls">
+    <div class="controls">
+        <ul>
+            <li>
+                <a href="#">
+                    <div class="zoom-ctrl" id="zoomplus"><i class="fa fa-plus-circle fa-3x"></i><span class="caption">Zoom in</span></div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="zoom-ctrl" id="zoomminus"><i class="fa fa-minus-circle fa-3x"></i><span class="caption">Zoom out</span></div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="localizee" id="home"><i class="fa fa-map-marker fa-3x"></i><span class="caption">Initialize</span></div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="stop-tool" id="stop"><i class="fa fa-hand-paper-o fa-3x"></i><span class="caption">Stop</span></div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="ctrl-wrap" id="navigate"><i class="fa fa-paper-plane fa-5x"></i><span class="caption">Navigate</span></div>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+<!-- nav box -->
+<nav class="side-pane">
+    <div class="box-out">
+        <div class="menu-btn">
+            <span class="icon">
+                <i class="fa fa-chevron-left" aria-hidden="true"></i>
+            </span>
+        </div>
+        <div class="settings-wrap"> Settings
+            <ul>
+                <li><a href="#"> Path View
+                        
+                        <span class="switch-ctrl">OFF</span>
+                        <label class="switch">
+                            <input type="checkbox" id="path">
+                            <span class="slider round"></span>
+                        </label>
+                        <span class="switch-ctrl">ON</span>
+                    
+                    </a></li>
+                <li><a href="#">
+                        <button type="button" class="btn btn-primary navigation-button active" id="maplive">Live</button>
+                        <button type="button" class="btn btn-success navigation-button" id="mapgraphical">Graphical</button>
+                    </a></li>
+
+                    <li><a href="">
+                       <button type="button" class="btn btn-primary mapping-button" id="startmap" >Start Mapping</button>
+                        
+                    </a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- end box1 -->
+</nav>
+<div id="nav" class="canvasScreen"></div>
+
+<!-- <div class="btn" id="home">home</div>
+<div class="btn" id="navigate">navigate</div>
+
+<div class="btn" id="zoomplus">+</div>
+<div class="btn" id="zoomminus">-</div> -->
+<div class="modal-load">
+    <!-- Place at bottom of page -->
+</div>
+{% endblock content %}

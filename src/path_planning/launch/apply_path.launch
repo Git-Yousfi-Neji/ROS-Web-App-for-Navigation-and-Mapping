@@ -1,0 +1,25 @@
+<launch>
+
+<arg name="map_file" default="/home/y/catkin_ws/maps/market.yaml"/>
+
+
+<include file="$(find turtlebot3_gazebo)/launch/turtlebot3_empty_world.launch"/>
+
+
+<include file="$(find turtlebot3_navigation)/launch/turtlebot3_navigation.launch"> 
+ 		
+			<!-- Arguments -->
+  <arg name="model" default="$(env TURTLEBOT3_MODEL)" doc="model type [burger, waffle, waffle_pi]"/>
+  <arg name="map_file"  value="$(arg map_file)" />
+  <arg name="open_rviz" default="true"/>
+  <arg name="move_forward_only" default="false"/>
+
+</include>
+
+
+<node name="soundplay_node" pkg="sound_play" type="soundplay_node.py" respawn="true" />
+<node name="waypoint" pkg="path_planning" type="waypoint.py" output="screen" respawn="true" />
+
+
+
+</launch>

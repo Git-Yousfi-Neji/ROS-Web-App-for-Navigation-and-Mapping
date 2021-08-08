@@ -1,0 +1,32 @@
+<!--template inheritance..this page is used to update every part of the code that are repeating-->
+<!DOCTYPE html>
+<html lang="en" class="index-con">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Load an icon library -->
+    <script type="text/javascript" src="{{ url_for('static', filename='js/jquery.min.js')}}"></script>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/font-awesome-4.7.0/css/font-awesome.min.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.min.css')}}">
+    <script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap.min.js')}}"></script>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css')}}">
+    {% if title %}
+    <title>{{title}}</title>
+    {% else %}
+    <title>Navigation</title>
+    {% endif %}
+    <script type="text/javascript" src="{{ url_for('static', filename='js/easeljs.min.js')}}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/eventemitter2.min.js')}}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/roslib.min.js')}}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/ros2d.js')}}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/nav2d.js')}}"></script>
+</head>
+
+<body style="height: 100%;margin: 0;font-family: Arial, Helvetica, sans-serif;">
+    <!-- <div> -->
+    {% block content %}{% endblock %}
+    <!-- </div> -->
+</body>
+
+</html>
