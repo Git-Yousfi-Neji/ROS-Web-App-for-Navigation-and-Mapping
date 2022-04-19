@@ -1,5 +1,4 @@
 ## A web application for Navigation and Mapping ROS
-## This is a modified version of rizwin work
 
 This is a web application that is build on Flask,serves the purpose of Mapping and Navigation of a robot that is build on ROS from a web browser.
 
